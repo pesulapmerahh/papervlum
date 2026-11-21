@@ -1,0 +1,36 @@
+[package]
+name = "papervlum-writer"
+version = { workspace = true }
+edition = { workspace = true }
+license = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+
+[dependencies]
+papervlum-core = { path = "../papervlum-core" }
+papervlum-format = { path = "../papervlum-format" }
+papervlum-ui = { path = "../papervlum-ui" }
+tokio = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+chrono = { workspace = true }
+ropey = { workspace = true }
+rustybuzz = { workspace = true }
+unicode-bidi = { workspace = true }
+unicode-linebreak = { workspace = true }
+unicode-script = { workspace = true }
+skrifa = { workspace = true }
+fontdb = { workspace = true }
+wgpu = { workspace = true }
+egui = { workspace = true }
+egui-wgpu = { workspace = true }
+petgraph = { workspace = true }
+indexmap = { workspace = true }
+ahash = { workspace = true }
+
+[dev-dependencies]
+proptest = { workspace = true }
+pretty_assertions = { workspace = true }
+criterion = { workspace = true }

@@ -1,0 +1,79 @@
+[workspace]
+resolver = "2"
+members = [
+    "papervlum-core",
+    "papervlum-format",
+    "papervlum-ui",
+    "papervlum-writer",
+    "papervlum-calc",
+    "papervlum-impress",
+    "papervlum-pdf",
+    "papervlum-android",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+authors = ["Papervlum Dev <dev@papervlum.local>"]
+repository = "https://github.com/papervlum/papervlum"
+
+[workspace.dependencies]
+# Core
+tokio = { version = "1.40", features = ["full"] }
+crossbeam = "0.8"
+anyhow = "1.0"
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+bitflags = "2.0"
+chrono = { version = "0.4", features = ["serde"] }
+log = "0.4"
+
+# Parsing
+zip = "0.6"
+quick-xml = { version = "0.31", features = ["serialize"] }
+calamine = "0.22"
+lopdf = "0.37"
+printpdf = "0.12"
+
+# Text & Layout
+rustybuzz = "0.9"
+unicode-bidi = "0.3"
+unicode-linebreak = "0.1"
+unicode-script = "0.5"
+ropey = { version = "2.0.0-beta.1" }
+skrifa = "0.5"
+fontdb = "0.7"
+
+# GPU Rendering
+wgpu = { version = "23", features = ["wgsl"] }
+wgpu-hal = { version = "23", package = "wgpu" }
+raw-window-handle = "0.6"
+egui = "0.29"
+egui-wgpu = "0.29"
+egui-winit = "0.29"
+
+# Math & Data
+petgraph = "0.6"
+indexmap = { version = "2.0", features = ["serde"] }
+ahash = "0.8"
+
+# Testing
+criterion = "0.5"
+proptest = "1.0"
+pretty_assertions = "1.4"
+
+# Fuzzing
+arbitrary = { version = "1.3", features = ["derive"] }
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
+opt-level = "z"
+
+[profile.release-lto]
+inherits = "release"
+lto = "thin"

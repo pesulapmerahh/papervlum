@@ -1,0 +1,37 @@
+[package]
+name = "papervlum-android"
+version = { workspace = true }
+edition = { workspace = true }
+license = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+papervlum-core = { path = "../papervlum-core" }
+papervlum-writer = { path = "../papervlum-writer" }
+papervlum-calc = { path = "../papervlum-calc" }
+papervlum-impress = { path = "../papervlum-impress" }
+papervlum-pdf = { path = "../papervlum-pdf" }
+jni = { version = "0.22", features = ["invocation"] }
+ndk = "0.6"
+ndk-glue = "0.6"
+ndk-sys = "0.6"
+android-activity = "0.6"
+android_logger = "0.15"
+log = "0.4"
+tokio = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+wgpu = { workspace = true }
+egui = { workspace = true }
+egui-wgpu = { workspace = true }
+raw-window-handle = { workspace = true }
+
+[dev-dependencies]
+proptest = { workspace = true }
+pretty_assertions = { workspace = true }

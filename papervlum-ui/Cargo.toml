@@ -1,0 +1,18 @@
+[package]
+name = "papervlum-ui"
+version = { workspace = true }
+edition = { workspace = true }
+license = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+
+[dependencies]
+papervlum-core = { path = "../papervlum-core" }
+egui = { workspace = true }
+egui-wgpu = { workspace = true }
+wgpu = { workspace = true }
+serde = { workspace = true }
+fontdb = { workspace = true }
+
+[dev-dependencies]
+pretty_assertions = { workspace = true }

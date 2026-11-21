@@ -1,0 +1,27 @@
+[package]
+name = "papervlum-core"
+version = { workspace = true }
+edition = { workspace = true }
+license = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+
+[dependencies]
+tokio = { workspace = true }
+crossbeam = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+bitflags = { workspace = true }
+chrono = { workspace = true }
+log = { workspace = true }
+ropey = { workspace = true }
+petgraph = { workspace = true }
+indexmap = { workspace = true }
+ahash = { workspace = true }
+
+[dev-dependencies]
+proptest = { workspace = true }
+pretty_assertions = { workspace = true }
+criterion = { workspace = true }
